@@ -1,0 +1,70 @@
+:root {
+    --bg: #1B0C24;
+    --surface: #2B1438;
+    --text: #FDEAFF;
+    --accent: #C89BE8;
+    --pink: #FFB3D9;
+    --blue: #A7D4FF;
+  }
+  header {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .candy-button {
+    background: linear-gradient(135deg, #ffb3d9, #cdb4f2);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0.75em 2em;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: 'Comic Neue', cursive;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .candy-button:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 18px rgba(255, 179, 217, 0.4);
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 2rem;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 800px;
+    background: var(--surface);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 0 30px var(--accent);
+  }
+  
+  h1, h2 {
+    color: var(--accent);
+  }
+  
+  a {
+    color: var(--pink);
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .project-list {
+    list-style: none;
+    padding: 0;
+  }
+  
