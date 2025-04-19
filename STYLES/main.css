@@ -19,6 +19,9 @@
     border-right: 2px solid #a74aff;
     width: fit-content;
     animation: blink-cursor 0.75s step-end infinite;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 10px;
   }
 
   @keyframes blink-cursor {
@@ -57,6 +60,7 @@
     justify-content: center;
     align-content: center;
     padding: 2rem;
+    height: 100vh;
   }
   
   .container {
