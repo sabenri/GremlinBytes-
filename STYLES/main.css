@@ -67,4 +67,56 @@
     list-style: none;
     padding: 0;
   }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .project-card {
+    background: linear-gradient(145deg, #ffe0f0, #e6d4ff);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    font-family: 'Comic Neue', cursive;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 179, 217, 0.3);
+  }
+  
+  .project-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #a74aff;
+  }
+  
+  .project-card p {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 1rem;
+  }
+  
+  .project-link {
+    display: inline-block;
+    padding: 0.5em 1.2em;
+    background-color: #ffb3d9;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease;
+  }
+  
+  .project-link:hover {
+    background-color: #ff8ecf;
+  }
+  
   
