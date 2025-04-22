@@ -1,0 +1,22 @@
+#gremlin-pop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+#gremlin {
+    position: absolute;
+    width: 80px;
+    height: 60px;
+    display: none;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+#gremlin:hover {
+    transform: scale(1.2);
+    transform: transform 0.2s ease;
+}

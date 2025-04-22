@@ -1,0 +1,43 @@
+.Candybugclaws {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1d102d;
+    color: #fbd2ff;
+    border: 2px dashed #af4aff;
+    border-radius: 1rem; 
+    max-width: 400px;
+    margin: 2rem auto;
+    box-shadow: 0 0 20px #a74aff66;
+}
+
+.buttons button {
+    background-color: #ffe6f2;
+    color: #5a004f;
+    border: 2px solid #ff99cc;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(255, 153, 204, 0.4);
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+  }
+  
+  .buttons button:hover {
+    background-color: #ffccf2;
+    color: #8b005a;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255, 105, 180, 0.5);
+  }
+
+.results {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+.outcome {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #ffbdf7;
+}
