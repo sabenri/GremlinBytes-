@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GremlinBytes</title>
   <link rel="stylesheet" href="STYLES/gremlinPop.css">
+  <link rel="stylesheet" href="STYLES/spellBook.css">
   <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
@@ -30,7 +31,7 @@
                 <h3>Candy Bug Claws</h3>
                 <img src="images/candybugclaws-preview.png" alt="Candy Bug Claws preview" class="project-image" />
                 <p>Gremlin’s take on rock-paper-scissors 🍬 🐛 🐾</p>
-                <a href="src/components/CandyBugClaws/dist/index.html" class="project-link">Try Game</a>
+                <a href="PAGES/candybugclaws.html" class="project-link">Try Game</a>
               </div>
           
             <div class="project-card">
@@ -52,9 +53,25 @@
       </ul>
     </section>
 
+    <div class="spellbook">
+      <h2>Spellbook</h2>
+      <input type="text" id="spellName" class="spell-input" placeholder="Spell name">
+      <textarea id="spelltext" placeholder="write here..."></textarea>
+      <button id="saveBtn" class="save-button"> save spell</button><button id="openPopupBtn" class="save-button">view spells</button>
+    </div>
+    <div id="spellPopup" class="Spell-popup hidden">
+      <div class="popup-content"> 
+        <span id="closePopupBtn">X</span>
+        <h2>saved Spells</h2>
+        <ul id="savedspellsList" class="spell-list"></ul>
+
+      </div>
+    </div>
+
     <section id="contact">
       <h2>Info</h2>
       <p>Let’s make something weird and wonderful: <a href="mailto:gremlin@bytes.dev">gremlin@bytes.dev</a></p>
+  
     </section>
 
     <footer>
@@ -72,5 +89,6 @@
 
   <script src="scripts/main.js"></script>
   <script src="scripts/gremlin.js"></script>
+  <script src="scripts/spellBook.js"></script>
 </body>
 </html>
