@@ -1,3 +1,5 @@
+let score =0;
+const scoreCount = document.getElementById('score-count');
 const gremlin = document.getElementById('gremlin');
 
 function randomPosition(){
@@ -26,10 +28,20 @@ function showGremlin() {
 
 }
 
-setInterval(showGremlin,60000);
+function scheduleGremlin(){
 
+    const randomDelay = Math.floor(Math.random() * 30000) + 30000;
+    setTimeout(() => {
+        showGremlin();
+        scheduleGremlin();
+    }, randomDelay);
+}
+
+scheduleGremlin();
 
 
 gremlin.addEventListener('click',() => {
     gremlin.style.display ='none';
+    score++;
+    scoreCount.textContent = score;
 });

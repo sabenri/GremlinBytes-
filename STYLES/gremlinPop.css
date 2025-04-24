@@ -20,3 +20,19 @@
     transform: scale(1.2);
     transform: transform 0.2s ease;
 }
+
+#gremlin-score {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #fceaff;
+    color: #6a006a;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: 2px #c57eff;
+    border-radius: 10px;
+    z-index: 10000;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
