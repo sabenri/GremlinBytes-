@@ -6,6 +6,9 @@
     box-shadow: 0 0 20px #fceabb66;
     max-width: 500px;
     width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 h2 {
@@ -50,6 +53,15 @@ textarea {
     justify-content: center;
     align-items: center;
     z-index: 999;
+  }
+
+  .spell-input{
+    background: #2b1b1b;
+    color: #ff8ecf;
+    display: flex;
+
+   
+
   }
   
   .popup-content {

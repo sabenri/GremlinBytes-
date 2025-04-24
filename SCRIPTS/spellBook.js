@@ -1,31 +1,68 @@
+const spellNameInput = document.getElementById('spellName');
 const textarea = document.getElementById('spelltext');
 const saveBtn = document.getElementById('saveBtn');
-
-window.addEventListener ('load',() =>{
-    const savedspell = localStorage.getItem('spell');
-    if(savedspell)textarea.value = savedspell
-});
-
-saveBtn.addEventListener('click',() => {
-    localStorage.setItem('spell',textarea.value);
-    alert('spell saved!')
-});
 
 const openPopupBtn = document.getElementById('openPopupBtn');
 const spellPopup = document.getElementById('spellPopup');
 const closePopupBtn = document.getElementById('closePopupBtn');
+const savedSpellsList = document.getElementById('savedSpellsList');
 
-openPopupBtn.addEventListener ('click', () => {
-    spellPopup.classList.remove('hidden');
-    loadSpellList();
+function loadSpellList() {
+  savedSpellsList.innerHTML = '';
+  const spells = JSON.parse(localStorage.getItem('spells') || '{}');
+
+  Object.keys(spells).forEach(name => {
+    const li = document.createElement('li');
+    li.textContent = name;
+    li.addEventListener('click', () => {
+      spellNameInput.value = name;
+      textarea.value = spells[name];
+      spellPopup.classList.add('hidden');
+    });
+    savedSpellsList.appendChild(li);
+  });
+}
+
+saveBtn.addEventListener('click', () => {
+  const name = spellNameInput.value.trim();
+  const content = textarea.value.trim();
+
+  if (!name || !content) {
+    alert('Please name your spell and write something!');
+    return;
+  }
+
+  const spells = JSON.parse(localStorage.getItem('spells') || '{}');
+  spells[name] = content;
+  localStorage.setItem('spells', JSON.stringify(spells));
+
+  alert(`"${name}" has been saved! ✨`);
+
+  spellNameInput.value = '';
+  textarea.value = '';
 });
 
-closePopupBtn.addEventListener('click',() => {
-    spellPopup.classList.add('hidden')
+openPopupBtn.addEventListener('click', () => {
+  spellPopup.classList.remove('hidden');
+  loadSpellList();
 });
 
-window.addEventListener('click',(e) =>{
-    if(e.target === spellPopup) {
-        spellPopup.classList.add('hidden');
-    }
+closePopupBtn.addEventListener('click', () => {
+  spellPopup.classList.add('hidden');
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target === spellPopup) {
+    spellPopup.classList.add('hidden');
+  }
+});
+
+window.addEventListener('load', () => {
+  const lastSpells = JSON.parse(localStorage.getItem('spells') || '{}');
+  const names = Object.keys(lastSpells);
+  if (names.length > 0) {
+    const last = names[names.length - 1];
+    spellNameInput.value = last;
+    textarea.value = lastSpells[last];
+  }
 });
