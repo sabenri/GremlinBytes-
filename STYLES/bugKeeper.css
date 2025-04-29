@@ -26,8 +26,11 @@ body {
     background: rgba(0, 0, 0, 0.2);
     padding: 1rem;
     border-radius: 1rem;
-    margin-bottom: 2rem;
-    display: inline-block;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: fit-content;
 }
 
 button {
@@ -50,4 +53,26 @@ button:hover {
 button:active {
     transform: translateY(3px);
     box-shadow: 0 2px #c978a5;
+}
+
+.return-button {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    background: linear-gradient(135deg, #ffb3d9, #cdb4f2);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0.75em 2em;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: 'Comic Neue', cursive;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.return-button:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 18px rgba(255, 179, 217, 0.4);
 }
