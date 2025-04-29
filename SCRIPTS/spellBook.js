@@ -14,12 +14,24 @@ function loadSpellList() {
   Object.keys(spells).forEach(name => {
     const li = document.createElement('li');
     li.textContent = name;
-    li.addEventListener('click', () => {
-      spellNameInput.value = name;
-      textarea.value = spells[name];
-      spellPopup.classList.add('hidden');
+
+    const deleteBtn = document.createElement('button');
+    deleteBtn.textContent ='❌';
+    deleteBtn.classList.add('delete-spell');
+    deleteBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        delete spells[name];
+        localStorage.setItem('spells', JSON.stringify(spells));
+        loadSpellList();
     });
-    savedSpellsList.appendChild(li);
+
+    li.addEventListener('click',() => {
+        spellNameInput.value = name;
+        textarea.value = spells[name];
+        spellPopup.classList.add('hidden');
+    });
+   li.appendChild(deleteBtn);
+   savedSpellsList.appendChild(li);
   });
 }
 

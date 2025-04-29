@@ -89,3 +89,10 @@ textarea {
     cursor: pointer;
   }
   
+  .delete-spell {
+    margin-left: 10px;
+    background: transparent;
+    border: none;
+    color: red;
+    cursor: pointer;
+  }
