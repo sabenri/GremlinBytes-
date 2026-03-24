@@ -6,8 +6,8 @@ const phrases = [
   
   const element = document.querySelector(".tagline");
   let phraseIndex = 0;
-  let charIndex = 0; // This was missing before!
-  let isDeleting = false; // `False` should be lowercase `false`
+  let charIndex = 0; 
+  let isDeleting = false; 
   
   function typeEffect() {
     const currentPhrase = phrases[phraseIndex];
