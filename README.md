@@ -1,6 +1,7 @@
 # GremlinBytes — Developer Portfolio
 
-A spooky-cute, gremlin-inspired developer portfolio showcasing my work in full-stack web development. Built with a little chaos, a lot of creativity, and one very determined gremlin
+A spooky-cute, gremlin-inspired developer portfolio showcasing my work in full-stack web development. 
+Built with a little chaos, a lot of creativity, and one very determined gremlin
 
 ---
 
@@ -91,9 +92,11 @@ An API-based app showcasing asynchronous data fetching and dynamic rendering.
 
 ##  About Me
 
-I’m a frontend and fullstack developer who combines **creative design** with **clean, functional code**.
-
-I enjoy building playful, memorable web experiences while maintaining strong technical foundations.
+I’m a certified full-stack web developer and artist!
+My work focuses on combining creativity with code.
+I love creating interactive projects such as mini-games and unique web experiences. 
+I’m always learning and looking for new ways to bring ideas to life while keeping them playful and engaging.
+Right now, my main focus is front-end development since I enjoy it the most—but back-end examples are coming soon!
 
 ---
 
