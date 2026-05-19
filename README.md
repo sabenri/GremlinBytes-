@@ -20,7 +20,7 @@ This site serves as a central hub for my projects, skills, and experience.
 
 ##  Live Site
 
-> View Portfolio: https://your-portfolio-link.com  
+> View Portfolio: [https://your-portfolio-link.com](http://gremlinbytes.com/)  
 > GitHub Repo: [(https://github.com/sabenri/GremlinBytes) ](https://github.com/sabenri/GremlinBytes)
 
 ---
